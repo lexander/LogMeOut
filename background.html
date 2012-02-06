@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script>
+
+        function removeCookies(cookieList){
+            for(var i = 0; i < cookieList.length; i++){
+                console.log("removing fb cookie " + cookieList[i].name);
+                chrome.cookies.remove({
+                    name: cookieList[i].name,
+                    url: "http://www.facebook.com"
+                });
+            }
+        };
+
+        chrome.extension.onRequest.addListener(
+            function(request, sender, sendResponse) {
+              if (request.action == "clear"){
+                // remove known tracking cookies from FB
+                chrome.cookies.getAll({
+                    session: false,
+                    domain: "facebook.com"
+                }, removeCookies);
+            }
+        });
+    </script>
+</head>
+</html>

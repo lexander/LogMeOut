@@ -1,0 +1,13 @@
+{
+    "name": "LogMeOut",
+    "version": "0.1",
+    "description": "Removes all cookies from Facebook when you log out of Facebook. See http://nikcub.appspot.com/logging-out-of-facebook-is-not-enough for a discussion of why this is important.",
+    "background_page": "background.html",
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": ["contentScript.js"]
+        }
+    ],
+    "permissions": [ "http://*/*", "https://*/*", "cookies", "tabs"]
+}

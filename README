@@ -1,0 +1,9 @@
+LogMeOut Chrome Extension
+
+Notices when you click the logout button on Facebook and removes all Facebook cookies from your browser.
+Facebook tracks users across the web by using cookies that uniquely identify the user to Facebook. 
+This allows them to build a larger profile of the user's interests and to pass the user's details to any 
+site the user visits which uses a Facebook "like" button.
+
+See http://nikcub.appspot.com/logging-out-of-facebook-is-not-enough for more details.
+
